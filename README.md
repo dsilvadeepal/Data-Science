@@ -2,11 +2,11 @@ From OSS University
 
 ## Curriculum
 
+- [Probability and Statistics](#probability-and-statistics)
 - [Linear Algebra](#linear-algebra)
 - [Single Variable Calculus](#single-variable-calculus)
 - [Multivariable Calculus](#multivariable-calculus)
 - [Python](#python)
-- [Probability and Statistics](#probability-and-statistics)
 - [Introduction to Data Science](#introduction-to-data-science)
 - [Machine Learning](#machine-learning)
 - [Project](#project)
@@ -21,14 +21,23 @@ From OSS University
 
 
 ---
+### Probability and Statistics
+Courses | Duration | Effort | Completed
+:-- | :--: | :--: | :--:
+[Introduction to Probability](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-1#.U3yb762SzIo)| 16 weeks | 12 hours/week | In Progress
+[Statistical Reasoning](https://lagunita.stanford.edu/courses/OLI/StatReasoning/Open/about)| - weeks | - hours/week
+[Intro to Descriptive Statistics](https://classroom.udacity.com/courses/ud827wsz1`)| 1 weeks |  12 hours/week | Completed
+[Intro to Inferential Statistics](https://classroom.udacity.com/courses/ud201)| 2 weeks | 12 hours/week | Completed
+
+
 
 ### Linear Algebra
 
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Linear Algebra - Foundations to Frontiers](https://www.edx.org/course/linear-algebra-foundations-frontiers-utaustinx-ut-5-04x#!)| 15 weeks | 8 hours/week
-[Applications of Linear Algebra Part 1](https://www.edx.org/course/applications-linear-algebra-part-1-davidsonx-d003x-1)| 5 weeks | 4 hours/week
-[Applications of Linear Algebra Part 2](https://www.edx.org/course/applications-linear-algebra-part-2-davidsonx-d003x-2)| 4 weeks | 5 hours/week
+Courses | Duration | Effort | Completed
+:-- | :--: | :--: | :--:
+[Linear Algebra - Foundations to Frontiers](https://www.edx.org/course/linear-algebra-foundations-frontiers-utaustinx-ut-5-04x#!)| 15 weeks | 8 hours/week |
+[Applications of Linear Algebra Part 1](https://www.edx.org/course/applications-linear-algebra-part-1-davidsonx-d003x-1)| 5 weeks | 4 hours/week |
+[Applications of Linear Algebra Part 2](https://www.edx.org/course/applications-linear-algebra-part-2-davidsonx-d003x-2)| 4 weeks | 5 hours/week |
 
 ### Single Variable Calculus
 Courses | Duration | Effort
@@ -49,15 +58,6 @@ Courses | Duration | Effort
 [Introduction to Computational Thinking and Data Science](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-3)| 10 weeks | 15 hours/week
 [Introduction to Python for Data Science](https://prod-edx-mktg-edit.edx.org/course/introduction-python-data-science-microsoft-dat208x-1)| 6 weeks | 2-4 hours/week
 [Programming with Python for Data Science](https://www.edx.org/course/programming-python-data-science-microsoft-dat210x)| 6 weeks | 3-4 hours/week
-
-### Probability and Statistics
-Courses | Duration | Effort
-:-- | :--: | :--:
-[Introduction to Probability](https://www.edx.org/course/introduction-probability-science-mitx-6-041x-1#.U3yb762SzIo)| 16 weeks | 12 hours/week
-[Statistical Reasoning](https://lagunita.stanford.edu/courses/OLI/StatReasoning/Open/about)| - weeks | - hours/week
-[Introduction to Statistics: Descriptive Statistics](https://www.edx.org/course/introduction-statistics-descriptive-uc-berkeleyx-stat2-1x)| 5 weeks | - hours/week
-[Introduction to Statistics: Probability](https://www.edx.org/course/introduction-statistics-probability-uc-berkeleyx-stat2-2x)| 5 weeks | - hours/week
-[Introduction to Statistics: Inference](https://www.edx.org/course/introduction-statistics-inference-uc-berkeleyx-stat2-3x)| 5 weeks | - hours/week
 
 ### Introduction to Data Science
 Courses | Duration | Effort
