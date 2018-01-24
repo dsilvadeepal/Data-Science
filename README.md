@@ -29,7 +29,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Course: [MongoDB for Developers](https://university.mongodb.com/courses/M101P/about) - note: this course is only intermittently offered, sign up at the start of Tier 1, then proceed to the other courses and return to this one when the next session opens up.
 - [x]  Course: [Intro to Descriptive Statistics](https://classroom.udacity.com/courses/ud827wsz1)
 - [x]  Course: [Intro to Inferential Statistics](https://classroom.udacity.com/courses/ud201)
-- [ ]  Course: [Python Data Science Toolbox (Part 1)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
+- [x]  Course: [Python Data Science Toolbox (Part 1)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
 - [ ]  Course: [Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
 - [ ]  Course: [Intro to Data Analysis](https://classroom.udacity.com/courses/ud170)
 - [ ]  Course: [Introduction to Biology - The Secret of Life](https://www.edx.org/course/introduction-biology-secret-life-mitx-7-00x-6) 
