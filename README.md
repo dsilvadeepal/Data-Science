@@ -12,7 +12,6 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [R Bloggers](https://www.r-bloggers.com/)
 
 ## Tier 0 - prep
-- [ ]  Course: [Question Everything: Scientific Thinking in Real Life](https://www.edx.org/course/question-everything-scientific-thinking-uqx-query101x-1) 
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [ ]  Course: [Introduction to Computer Science and Programming Using Python](https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11) 
@@ -30,11 +29,11 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Intro to Descriptive Statistics](https://classroom.udacity.com/courses/ud827wsz1)
 - [x]  Course: [Intro to Inferential Statistics](https://classroom.udacity.com/courses/ud201)
 - [x]  Course: [Python Data Science Toolbox (Part 1)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
-- [ ]  Course: [Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
+- [x]  Course: [Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
 - [ ]  Course: [Intro to Data Analysis](https://classroom.udacity.com/courses/ud170)
 - [ ]  Course: [Introduction to Biology - The Secret of Life](https://www.edx.org/course/introduction-biology-secret-life-mitx-7-00x-6) 
 - [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
-- [ ]  Course: [Introduction to Probability and Statistics](https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/index.htm) 
+- [ ]  Course: [Introduction to Probability - The Science of Uncertainty](https://courses.edx.org/courses/course-v1:MITx+6.041x_4+1T2017/course/) 
 - [ ]  Course Series: [Deep Learning Path on Cognitive Class](https://cognitiveclass.ai/learn/deep-learning/)
 - [ ]  Course: [Introduction to Computational Thinking and Data Science](https://www.edx.org/course/introduction-computational-thinking-data-mitx-6-00-2x-6) 
 - [ ]  Course: [Data Science](http://cs109.github.io/2015/)
