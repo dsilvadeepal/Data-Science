@@ -18,10 +18,9 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
 - [ ]  *Course: [Introduction to Python](https://www.udacity.com/course/introduction-to-python--ud1110) 
-- [ ]  *Course Series: [Data Science Path on Cognitive Class](https://cognitiveclass.ai/learn/data-science/)
 - [ ]  *Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  *Book: [Think Python](http://greenteapress.com/thinkpython2/thinkpython2.pdf)
-- [ ]  *Project: Do all problems in Rosalind's [Python Village](http://rosalind.info/problems/list-view/?location=python-village) 
+- [x]  Project: Do all problems in Rosalind's [Python Village](http://rosalind.info/problems/list-view/?location=python-village) 
 - [ ]  *Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [ ]  Project: Complete one [Bot Programming Competition on CodinGame](https://www.codingame.com/multiplayer/bot-programming)
 
