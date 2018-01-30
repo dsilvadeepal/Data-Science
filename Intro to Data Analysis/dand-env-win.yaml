@@ -1,4 +1,4 @@
-name: DAND
+name: DAND_Udacity
 channels: !!python/tuple
 - defaults
 dependencies:
