@@ -18,7 +18,18 @@ nrow(MichaelJackson)
 MichaelJackson$songtitle
 MichaelJackson[c(“songtitle”, “Top10”)]
 
+#4. The variable corresponding to the estimated time signature (timesignature) is discrete, meaning that it only takes integer values (0, 1, 2, 3, . . . ). 
+#What are the values of this variable that occur in our dataset? Select all that apply.
+# 0, 1, 3, 4, 5, 7
 
+#Which timesignature value is the most frequent among songs in our dataset?  
+# 4
+table(songs$timesignature)
+
+#5. Out of all of the songs in our dataset, the song with the highest tempo is one of the following songs. Which one is it?
+# Wanna Be Startin' Somethin'
+which.max(songs$tempo)
+songs$songtitle[6206]
 
 
 
