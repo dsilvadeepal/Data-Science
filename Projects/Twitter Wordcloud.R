@@ -1,0 +1,5 @@
+library(twitteR)
+library(ROAuth)
+library(stringr)
+library(tm)
+library(wordcloud)
