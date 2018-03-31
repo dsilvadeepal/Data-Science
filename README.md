@@ -22,7 +22,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
 - [ ]  *Book: [R for Data Science](http://r4ds.had.co.nz/index.html)
 - [x]  Project: Do all problems in Rosalind's [Python Village](http://rosalind.info/problems/list-view/?location=python-village) 
-- [ ]  *Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
+- [x]  Project: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 - [ ]  Project: Complete one [Bot Programming Competition on CodinGame](https://www.codingame.com/multiplayer/bot-programming)
 
 
@@ -32,9 +32,9 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Intro to Inferential Statistics](https://classroom.udacity.com/courses/ud201)
 - [x]  Course: [Python Data Science Toolbox (Part 1)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
 - [x]  Course: [Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
-- [ ]  *Course: [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)
+- [ ]  Course: [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)
 - [ ]  Course: [Data Visualization](https://www.coursera.org/learn/datavisualization/home/welcome)
-- [ ]  *Course: [A/B Testing](https://www.udacity.com/course/ab-testing--ud257?utm_medium=referral&utm_campaign=api)
+- [ ]  Course: [A/B Testing](https://www.udacity.com/course/ab-testing--ud257?utm_medium=referral&utm_campaign=api)
 - [ ]  Course: [Introduction to Biology - The Secret of Life](https://www.edx.org/course/introduction-biology-secret-life-mitx-7-00x-6) 
 - [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  
 - [ ]  Course: [Introduction to Probability - The Science of Uncertainty](https://courses.edx.org/courses/course-v1:MITx+6.041x_4+1T2017/course/) 
