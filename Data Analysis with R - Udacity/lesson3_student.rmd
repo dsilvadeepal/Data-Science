@@ -360,6 +360,15 @@ Response:
 Notes:
 
 ```{r Getting Logical}
+summary(pf$mobile_likes)
+
+summary(pf$mobile_likes > 0)
+
+mobile_check_in <-  NA
+pf$mobile_check_in <- ifelse(pf$mobile_likes > 0, 1, 0)
+pf$mobile_check_in <- factor(pf$mobile_check_in)
+summary(pf$mobile_check_in)
+sum(pf$mobile_check_in ==1) / length(pf$mobile_check_in)
 
 ```
 
@@ -369,6 +378,14 @@ Response:
 
 ### Analyzing One Variable
 Reflection:
+
+Take a close look at individual variables
+Understand they types of values they take on, what the distributions ook like
+If they are missing values or are outliers.
+Histograms, box plots, frequency polygons
+Change limits on axes
+Adjust bin width on histograms
+Transformed variables logarithmically or  turned them into binary
 
 ***
 
