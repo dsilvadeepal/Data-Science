@@ -43,6 +43,8 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml)
 
+[Log Transformations of Data](https://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)
+
 
 #Related Courses
 [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)
