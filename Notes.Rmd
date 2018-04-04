@@ -45,6 +45,9 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 [Log Transformations of Data](https://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)
 
+[How to read and use a Boxplot](http://flowingdata.com/2008/02/15/how-to-read-and-use-a-box-and-whisker-plot/)
+
+
 
 #Related Courses
 [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)

@@ -258,13 +258,16 @@ summary(sqrt(pf$friend_count))
 ### Add a Scaling Layer
 Notes:
 
+ggplot(aes(x = friend_count), data = pf) +
+  scale_x_log10()
+
 ```{r Add a Scaling Layer}
 library(gridExtra)
 
 p1 <-  qplot(x=friend_count, data=pf)
-p2 <-  qplot(x=log10(pf$friend_count +1), data=pf)
+p2 <-  qplot(x=log10(pf$friend_count + 1), data=pf)
 p3 <-  qplot(x=sqrt(pf$friend_count), data=pf)
-grid.arrange(p1,p2,p3)
+grid.arrange(p1,p2,p3, ncol=1)
 ```
 
 ***
@@ -273,7 +276,10 @@ grid.arrange(p1,p2,p3)
 ### Frequency Polygons
 
 ```{r Frequency Polygons}
-
+qplot(x = friend_count,y = ..count../sum(..count..),
+      data = subset(pf, !is.na(gender)),
+      binwidth = 10, geom = "freqpoly", color = gender) +
+  scale_x_continuous(lim = c(0, 1000), breaks = seq(0, 1000, 50)) 
 ```
 
 ***
@@ -282,9 +288,16 @@ grid.arrange(p1,p2,p3)
 Notes:
 
 ```{r Likes on the Web}
-
+qplot(x = www_likes,
+      data = subset(pf, !is.na(gender)),
+      geom = "freqpoly", color = gender) +
+  scale_x_continuous() +
+  scale_x_log10()
 ```
 
+```{r}
+by(pf$www_likes, pf$gender, sum)
+```
 
 ***
 
@@ -292,13 +305,24 @@ Notes:
 Notes:
 
 ```{r Box Plots}
+qplot(x = gender, y = friend_count, 
+      data = subset(pf, !is.na(gender)), 
+      geom = "boxplot")
+
 
 ```
 
 #### Adjust the code to focus on users who have friend counts between 0 and 1000.
 
 ```{r}
+qplot(x = gender, y = friend_count, 
+      data = subset(pf, !is.na(gender)), 
+      geom = "boxplot", ylim = c(0,1000))
 
+qplot(x = gender, y = friend_count, 
+      data = subset(pf, !is.na(gender)), 
+      geom = "boxplot") +
+  coord_cartesian(ylim = c(0,1000))
 ```
 
 ***
@@ -307,7 +331,12 @@ Notes:
 Notes:
 
 ```{r Box Plots, Quartiles, and Friendships}
+qplot(x = gender, y = friend_count, 
+      data = subset(pf, !is.na(gender)), 
+      geom = "boxplot") +
+  coord_cartesian(ylim = c(0,250))
 
+by(pf$friend_count, pf$gender, summary)
 ```
 
 #### On average, who initiated more friendships in our sample: men or women?
@@ -315,7 +344,12 @@ Response:
 #### Write about some ways that you can verify your answer.
 Response:
 ```{r Friend Requests by Gender}
+qplot(x = gender, y = friendships_initiated, 
+      data = subset(pf, !is.na(gender)), 
+      geom = "boxplot") +
+  coord_cartesian(ylim = c(0,150))
 
+by(pf$friendships_initiated, pf$gender, summary)
 ```
 
 Response:
