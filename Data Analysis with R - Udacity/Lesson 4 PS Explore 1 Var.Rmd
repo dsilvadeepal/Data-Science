@@ -108,3 +108,32 @@ qplot(x = clarity, y = price, data = diamonds, title = "Diamond Price by Clarity
 ggsave('priceBoxplot.png')
 ```
 
+```{r}
+summary(subset(diamonds, diamonds$color == 'D'))
+
+summary(subset(diamonds, diamonds$color == 'J'))
+
+IQR(subset(diamonds, diamonds$color == 'D')$price)
+
+IQR(subset(diamonds, diamonds$color == 'J')$price)
+
+```
+
+Investigate the price per carat of diamonds across the different colors of diamonds using boxplots.
+
+```{r}
+qplot(x = color, y = price/carat, data = diamonds, title = "Diamond Price/Carat by Diamond Color", 
+      xlab ="Clarity of Diamond", ylab = "Diamond Price/Carat USD", geom = "boxplot")
+
+ggsave('pricepercaratBoxplot.png')
+```
+
+Investigate carat weight using a frequency polygon chart.
+
+```{r}
+qplot(x = carat, data = diamonds, geom = "freqpoly", binwidth = .01,
+        title = "Diamond Freq by Carat", xlab = "Carat", ylab = "Diamond Frequency") +
+  scale_x_continuous(limits = c(0, 1.2))
+```
+
+Reference http://fch808.github.io/Data-Analysis-with-R-Exercises.html

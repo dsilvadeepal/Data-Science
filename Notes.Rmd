@@ -32,6 +32,16 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 [Tidy Data Presentation by Hadley Wickham (June 2012)](http://courses.had.co.nz.s3-website-us-east-1.amazonaws.com/12-rice-bdsi/slides/07-tidy-data.pdf)
 
+[Data Wrangling in R ](https://s3.amazonaws.com/udacity-hosted-downloads/ud651/DataWranglingWithR.pdf)
+
+Data munging or data wrangling can take up much of a data scientist's or data analyst's time. There are two R packages that make these tasks easier in R: tidyr and dplyr.
+
+tidyr -a package that reshapes the layout of your data
+
+dplyr - a package that helps you transform tidy, tabular data
+
+
+
 #Help links
 [Quick R](https://www.statmethods.net/)
 
@@ -51,6 +61,7 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 
 #Related Courses
 [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)
+
 
 
 
