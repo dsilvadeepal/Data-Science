@@ -119,6 +119,7 @@ Create your plot!
 ```{r Conditional Means Plot}
 ggplot(aes(x = age, y = friend_count_mean), data = pf.fc_by_age) +
   geom_line()
+
 ```
 
 ***
