@@ -40,6 +40,24 @@ tidyr -a package that reshapes the layout of your data
 
 dplyr - a package that helps you transform tidy, tabular data
 
+[ggplot geoms](http://ggplot2.tidyverse.org/reference/)
+
+[ggplot2 tutorial by Ramon Saccilotto](http://bbs.ceb-institute.org/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+
+#dplyr Package
+
+[dplyr intro](https://blog.rstudio.com/2014/01/17/introducing-dplyr/)
+
+[Introduction to dplyr - knitted html file](http://rstudio-pubs-static.s3.amazonaws.com/11068_8bc42d6df61341b2bed45e9a9a3bf9f4.html)
+
+The following tutorials are presented by Hadley Wickham at useR 2014.
+
+[Introduction of dplyr](https://www.r-bloggers.com/hadley-wickham-presents-dplyr-at-user-2014/)
+
+[dplyr Tutorial Part 1](https://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/)
+
+[dplyr Tutorial Part 2](https://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-2/)
+
 
 
 #Help links
