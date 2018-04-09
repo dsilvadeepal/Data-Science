@@ -106,7 +106,7 @@ library("dplyr")
 
 pf.fc_by_age <- pf %>%
   group_by(age) %>%
-  summarise( friend_count_mean = mean(friend_count),
+  summarise(friend_count_mean = mean(friend_count),
           friend_count_median = median(friend_count),
           n = n()) %>%
   arrange(age)
@@ -128,7 +128,29 @@ ggplot(aes(x = age, y = friend_count_mean), data = pf.fc_by_age) +
 Notes:
 
 ```{r Overlaying Summaries with Raw Data}
+ggplot(aes(x = age, y = friend_count), data = pf) +
+  geom_jitter(alpha = 1/20,
+              position = position_jitter(height = 0),
+              color = "orange") +
+  xlim(13, 90) +
+  coord_trans(y = "sqrt") +
+  geom_line(stat = "summary", fun.y = mean) +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.1), linetype = 2, color = "blue") +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.9), linetype = 2, color = "blue") +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.5), color = "blue")
+```
 
+
+```{r}
+ggplot(aes(x = age, y = friend_count), data = pf) +
+  geom_jitter(alpha = 1/20,
+              position = position_jitter(height = 0),
+              color = "orange") +
+  coord_cartesian(xlim = c(13, 70), ylim = c(0, 1000)) +
+  geom_line(stat = "summary", fun.y = mean) +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.1), linetype = 2, color = "blue") +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.9), linetype = 2, color = "blue") +
+  geom_line(stat = "summary", fun.y = quantile, fun.args = list(probs = 0.5), color = "blue")
 ```
 
 #### What are some of your observations of the plot?
@@ -147,7 +169,11 @@ Notes:
 Notes:
 
 ```{r Correlation}
+cor.test(pf$age, pf$friend_count, method = "pearson")
 
+#OR 
+
+with(pf, cor.test(age, friend_count, method = "pearson"))
 ```
 
 Look up the documentation for the cor.test function.
@@ -161,7 +187,7 @@ Response:
 Notes:
 
 ```{r Correlation on Subsets}
-with(                 , cor.test(age, friend_count))
+with(subset(pf, age <= 70), cor.test(age, friend_count))
 ```
 
 ***
@@ -175,7 +201,8 @@ Notes:
 Notes:
 
 ```{r}
-
+ggplot(aes(x = www_likes_received, y = likes_received), data = pf) +
+  geom_point()
 ```
 
 ***
@@ -184,13 +211,17 @@ Notes:
 Notes:
 
 ```{r Strong Correlations}
-
+ggplot(aes(x = www_likes_received, y = likes_received), data = pf) +
+  geom_point() +
+  xlim(0, quantile(pf$www_likes_received, 0.95)) +
+  ylim(0, quantile(pf$likes_received, 0.95)) +
+  geom_smooth(method = "lm", color = "red")
 ```
 
 What's the correlation betwen the two variables? Include the top 5% of values for the variable in the calculation and round to 3 decimal places.
 
 ```{r Correlation Calcuation}
-
+cor.test(pf$www_likes_received, pf$likes_received)
 ```
 
 Response:
@@ -206,14 +237,18 @@ Notes:
 Notes:
 
 ```{r More Caution With Correlation}
-install.packages('alr3')
+#install.packages('alr3')
 library(alr3)
+data(Mitchell)
+?Mitchell
+
 ```
 
 Create your plot!
 
 ```{r Temp vs Month}
-
+ggplot(aes(x = Month, y = Temp), data = Mitchell) + 
+  geom_point()
 ```
 
 ***
@@ -225,7 +260,7 @@ b. What is the actual correlation of the two variables?
 (Round to the thousandths place)
 
 ```{r Noisy Scatterplots}
-
+cor.test(Mitchell$Month, Mitchell$Temp)
 ```
 
 ***
@@ -234,7 +269,11 @@ b. What is the actual correlation of the two variables?
 Notes:
 
 ```{r Making Sense of Data}
+range(Mitchell$Month)
 
+ggplot(aes(x = Month, y = Temp), data = Mitchell) + 
+  geom_point() +
+  scale_x_continuous(breaks = seq(0, 203, 12))
 ```
 
 ***
@@ -243,6 +282,11 @@ Notes:
 
 What do you notice?
 Response:
+
+```{r}
+ggplot(aes(x=(Month%%12),y=Temp), data=Mitchell)+
+  geom_point()
+```
 
 Watch the solution video and check out the Instructor Notes!
 Notes:
