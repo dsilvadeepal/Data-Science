@@ -22,4 +22,36 @@ Create a scatterplot of price vs x. using the ggplot syntax.
 ggplot(aes(x = price, y = x), data = diamonds) +
   geom_point()
 ```
+Correlations
+
+```{r}
+cor.test(diamonds$price, diamonds$x)
+
+cor.test(diamonds$price, diamonds$y)
+
+cor.test(diamonds$price, diamonds$z)
+```
+
+Create a simple scatter plot of price vs depth.
+
+```{r}
+ggplot(aes(x = price, y = depth), data = diamonds) +
+  geom_point(alpha = 1/100) +
+  scale_x_continuous(breaks = seq(0,10,2))
+```
+
+Correlations of depth vs price
+
+```{r}
+cor.test(diamonds$depth, diamonds$price)
+```
+
+Create a scatterplot of price vs carat and omit the top 1% of price and carat values.
+
+```{r}
+ggplot(aes(x = carat, y = price), data = diamonds) +
+  geom_point() +
+  xlim(0, quantile(diamonds$carat, 0.99)) +
+  ylim(0, quantile(diamonds$price, 0.99))
+```
 
