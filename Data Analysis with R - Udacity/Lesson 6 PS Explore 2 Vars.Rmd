@@ -122,5 +122,19 @@ head(diamondsByClarity)
 
 ```{r}
 library(gridExtra)
+
+diamonds_by_clarity <- group_by(diamonds, clarity)
+diamonds_mp_by_clarity <- summarise(diamonds_by_clarity, mean_price = mean(price))
+
+diamonds_by_color <- group_by(diamonds, color)
+diamonds_mp_by_color <- summarise(diamonds_by_color, mean_price = mean(price))
+
+a <- ggplot(aes(x = clarity, y = mean_price), data = diamonds_mp_by_clarity) + 
+  geom_bar(stat = "identity")
+
+b <- ggplot(aes(x = color, y = mean_price), data = diamonds_mp_by_color) + 
+  geom_bar(stat = "identity")
+
+grid.arrange(a, b, ncol = 1)
 ```
 
