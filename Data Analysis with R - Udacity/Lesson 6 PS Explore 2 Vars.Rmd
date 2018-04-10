@@ -1,0 +1,25 @@
+---
+title: "Lesson 6 Problem Set - Explore 2 Variables"
+author: "Deepal DSilva"
+date: "April 9, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Load the diamonds dataset
+```{r}
+library(ggplot2)
+data("diamonds")
+summary(diamonds)
+```
+
+Create a scatterplot of price vs x. using the ggplot syntax.
+
+```{r}
+ggplot(aes(x = price, y = x), data = diamonds) +
+  geom_point()
+```
+
