@@ -94,4 +94,33 @@ ggplot(aes(x = volume, y = price), data = new_diamonds) +
   geom_point(alpha = 1/50, color = "orange") + 
   geom_smooth(method = lm)
 ```
+Use the function dplyr package to create a new data frame containing info on diamonds by clarity.
+
+Name the data frame diamondsByClarity. The data frame should contain the following variables in this order.
+
+       (1) mean_price
+       (2) median_price
+       (3) min_price
+       (4) max_price
+       (5) n
+
+ where n is the number of diamonds in each level of clarity.
+
+```{r}
+diamondsByClarity <- diamonds %>%
+  group_by(clarity) %>%
+  summarise(mean_price = mean(price),
+          median_price = median(price),
+          min_price = min(price),
+          max_price = max(price),
+          n = n())
+
+head(diamondsByClarity)
+
+```
+
+
+```{r}
+library(gridExtra)
+```
 
