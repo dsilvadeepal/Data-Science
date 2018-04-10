@@ -12,6 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #Load the diamonds dataset
 ```{r}
 library(ggplot2)
+library(dplyr)
 data("diamonds")
 summary(diamonds)
 ```
@@ -53,5 +54,44 @@ ggplot(aes(x = carat, y = price), data = diamonds) +
   geom_point() +
   xlim(0, quantile(diamonds$carat, 0.99)) +
   ylim(0, quantile(diamonds$price, 0.99))
+```
+
+
+Create a scatterplot of price vs. volume (x * y * z). This is a very rough approximation for a diamond's volume.
+
+Create a new variable for volume in the diamonds data frame.
+
+```{r}
+diamonds$volume <- diamonds$x * diamonds$y * diamonds$z
+
+head(diamonds)
+
+ggplot(aes(x = volume, y = price), data = diamonds) + 
+  geom_point()
+```
+
+Count diamonds with volume = 0
+
+```{r}
+summary(diamonds$volume == 0)
+```
+
+What is the correlation between price and volume
+Exclude diamonds with 0 volums or greater than or equal to 800
+
+```{r}
+new_diamonds <- subset(diamonds, diamonds$volume > 0 & diamonds$volume < 800)
+head(new_diamonds)
+
+cor.test(new_diamonds$price, new_diamonds$volume)
+
+```
+
+Subset the data to exclude diamonds with a volume greater than or equal to 800. Also, exclude diamonds with a volume of 0. Adjust the transparency of the points and add a linear model to the plot.
+
+```{r}
+ggplot(aes(x = volume, y = price), data = new_diamonds) +
+  geom_point(alpha = 1/50, color = "orange") + 
+  geom_smooth(method = lm)
 ```
 
