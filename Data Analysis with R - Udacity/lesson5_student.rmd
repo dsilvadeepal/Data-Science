@@ -126,7 +126,7 @@ table(pf$year_joined_bucket)
 ggplot(aes(x = age, y = friend_count),
        data = subset(pf, !is.na(year_joined_bucket))) +
   geom_line(aes(color = year_joined_bucket),
-            stat = 'summary', fun.y = median)
+            stat = "summary", fun.y = median)
 ```
 
 ***
@@ -135,7 +135,11 @@ ggplot(aes(x = age, y = friend_count),
 Notes:
 
 ```{r Plot the Grand Mean}
-
+ggplot(aes(x = age, y = friend_count),
+       data = subset(pf, !is.na(year_joined_bucket))) +
+  geom_line(aes(color = year_joined_bucket),
+            stat = "summary", fun.y = mean)  +
+  geom_line(stat = "summary", fun.y = mean, linetype = 2 )
 ```
 
 ***
@@ -144,7 +148,7 @@ Notes:
 Notes:
 
 ```{r Friending Rate}
-
+with(subset(pf, tenure >= 1), summary(friend_count/tenure))
 ```
 
 ***
@@ -157,7 +161,9 @@ What is the median friend rate?
 What is the maximum friend rate?
 
 ```{r Friendships Initiated}
-
+ggplot(aes(x = tenure, y = friendships_initiated/tenure),
+       data = subset(pf, tenure >= 1)) +
+  geom_line(aes(color = year_joined_bucket), stat = "summary", fun.y = mean)
 ```
 
 ***
@@ -169,25 +175,23 @@ Notes:
 
 ggplot(aes(x = tenure, y = friendships_initiated / tenure),
        data = subset(pf, tenure >= 1)) +
-  geom_line(aes(color = year_joined.bucket),
-            stat = 'summary',
-            fun.y = mean)
+  geom_smooth(aes(color = year_joined_bucket)) 
 
 ggplot(aes(x = 7 * round(tenure / 7), y = friendships_initiated / tenure),
        data = subset(pf, tenure > 0)) +
-  geom_line(aes(color = year_joined.bucket),
+  geom_line(aes(color = year_joined_bucket),
             stat = "summary",
             fun.y = mean)
 
 ggplot(aes(x = 30 * round(tenure / 30), y = friendships_initiated / tenure),
        data = subset(pf, tenure > 0)) +
-  geom_line(aes(color = year_joined.bucket),
+  geom_line(aes(color = year_joined_bucket),
             stat = "summary",
             fun.y = mean)
 
 ggplot(aes(x = 90 * round(tenure / 90), y = friendships_initiated / tenure),
        data = subset(pf, tenure > 0)) +
-  geom_line(aes(color = year_joined.bucket),
+  geom_line(aes(color = year_joined_bucket),
             stat = "summary",
             fun.y = mean)
 
@@ -209,7 +213,14 @@ Notes:
 Notes:
 
 ```{r Histograms Revisited}
+yo <-  read.csv("yogurt.csv")
 
+yo$id <- factor(yo$id)
+summary(yo)
+str(yo)
+
+ggplot(aes(x = price), data = yo) +
+  geom_histogram(binwidth = 1)
 ```
 
 ***
@@ -218,7 +229,12 @@ Notes:
 Notes:
 
 ```{r Number of Purchases}
+yo <- transform(yo, all.purchases = strawberry + blueberry + pina.colada + plain + mixed.berry)
 
+summary(yo$all.purchases)
+
+ggplot(aes(x = all.purchases), data = yo) +
+  geom_histogram(binwidth = 1)
 ```
 
 ***
@@ -227,7 +243,8 @@ Notes:
 Notes:
 
 ```{r Prices over Time}
-
+ggplot(aes(x = time, y = price), data = yo) + 
+  geom_jitter(alpha = .25, shape = 21)
 ```
 
 ***
