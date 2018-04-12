@@ -86,7 +86,7 @@ Notes:
 Notes:
 
 ```{r Conditional Means}
-library("dplyr")
+library(dplyr)
 
 age_groups <- group_by(pf, age)
 

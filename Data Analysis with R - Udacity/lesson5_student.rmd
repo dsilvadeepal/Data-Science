@@ -257,6 +257,15 @@ Notes:
 ### Looking at Samples of Households
 
 ```{r Looking at Sample of Households}
+set.seed(123)
+
+sample.ids <- sample(levels(yo$id), 16)
+
+ggplot(aes(x = time, y = price),
+       data = subset(yo, id %in% sample.ids)) +
+  facet_wrap( ~ id) +
+  geom_line() +
+  geom_point(aes(size = all.purchases), pch = 1)
 
 ```
 
@@ -275,6 +284,19 @@ Notes:
 ### Scatterplot Matrix
 Notes:
 
+
+```{r}
+install.packages("GGally")
+library(GGally)
+theme_set(theme_minimal(20))
+
+set.seed(1836)
+pf_subset <- pf[ , c('age', 'dob_year', 'dob_month', 'gender', 'tenure')]
+names(pf_subset)
+
+ggpairs(pf_subset[sample.int(nrow(pf_subset), 1000), ])
+```
+
 ***
 
 ### Even More Variables
@@ -291,6 +313,7 @@ colnames(nci) <- c(1:64)
 ```
 
 ```{r}
+library(reshape2)
 nci.long.samp <- melt(as.matrix(nci[1:200,]))
 names(nci.long.samp) <- c("gene", "case", "value")
 head(nci.long.samp)
