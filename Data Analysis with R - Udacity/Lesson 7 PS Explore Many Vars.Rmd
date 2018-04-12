@@ -1,0 +1,73 @@
+---
+title: "Lesson 7 Problem Set - Explore many variables"
+author: "Deepal DSilva"
+date: "April 12, 2018"
+output: html_document
+---
+
+```{r}
+library(ggplot2)
+library(dplyr)
+data("diamonds")
+names(diamonds)
+```
+
+ Create a histogram of diamond prices. Facet the histogram by diamond color and use cut to color the histogram bars.
+
+```{r}
+ggplot(aes(x = log(price)), data = diamonds) +
+  geom_histogram(aes(fill = cut)) +
+  facet_wrap(~color) +
+  scale_fill_brewer(type = 'qual')
+```
+
+Create a scatterplot of diamond price vs. table and color the points by the cut of the diamond.
+
+```{r}
+ggplot(aes(x = table, y = price), data = diamonds) +
+  geom_point(aes(color = cut), alpha = 0.25) +
+  xlim(c(45, 80)) +
+  scale_fill_brewer(type = 'qual')
+```
+
+
+Create a scatterplot of diamond price vs. volume (x * y * z) and color the points by the clarity of diamonds.
+Use scale on the y-axis to take the log10 of price. You should also omit the top 1% of diamond volumes from the plot.
+
+```{r}
+data("diamonds")
+diamonds <- mutate(diamonds, volume = x * y * z)
+
+ggplot(aes(x = volume, y = price), 
+  data = subset(diamonds, diamonds$volume < quantile(diamonds$volume, 0.99) & diamonds$volume > 0)) +
+  geom_point(aes(color = clarity), alpha = 0.25) +
+  scale_y_log10() +
+  scale_color_brewer(type = 'div')
+```
+
+Create a line graph of the median proportion of friendships initiated ('prop_initiated') vs. tenure and color the line segment by year_joined.bucket.
+
+```{r}
+pf <- transform(pf, prop_initiated = friendships_initiated/friend_count)
+library(tidyr)
+pf$year_joined <- floor(2014 - (pf$tenure/365))
+pf$year_joined.bucket <- cut(pf$year_joined,c(2004, 2009, 2011, 2012, 2014))
+
+ggplot(aes(y = prop_initiated, x = 90 *round(tenure/90)), 
+  data = subset(pf, !is.na(prop_initiated) )) +
+  geom_line(aes(color = year_joined.bucket), fun.y = "median", stat = "summary") +
+  #geom_smooth(aes(color = year_joined.bucket)) +
+  scale_color_brewer(type = 'div')
+
+by(pf$prop_initiated, pf$year_joined.bucket, summary)
+```
+
+Create a scatter plot of the price/carat ratio of diamonds. The variable x should be assigned to cut. The points should be colored by diamond color, and the plot should be faceted by clarity.
+
+```{r}
+ggplot(aes(x = cut, y = price/carat), data = diamonds ) +
+  geom_jitter(aes(color = color)) +
+  facet_wrap(~ clarity) +
+  scale_color_brewer(type = 'div')
+```
+
