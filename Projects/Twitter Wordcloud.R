@@ -1,40 +1,55 @@
+library(twitteR)
+library(tm)
+library(wordcloud)
+library(wordcloud2)
+library(RColorBrewer)
+
+consumer_key <- "mftPn6qtOfCL46fzJY3pTeVI4"
+consumer_secret <- "x5D1VIlV1O4TkZPshj31j88CutI8X2eSfgryy0pdMpDJjUTcKK"
+access_token <- "2924790128-WORx3u9bTwDqAYr6zSanDnDlafLaSHBdzVKYZxC"
+access_secret <- "aMFTRClgP3Q2K0pJ21p1fromq1OWx4cS1hU6i4qJyqpZb"
+setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
+
+tweets <- searchTwitter("#RampageMovie",n=3000,lang="en", resultType = "popular")
+tweets.txt <- sapply(tweets, function(t)t$getText())
+tweets.txt <- str_replace_all(tweets.txt,"[^[:graph:]]", " ") 
 
 
-#screenName <- c("katyperry", "justinbieber", "rihanna", "taylorswift13", "TheEllenShow")
+docs <- Corpus(VectorSource(tweets.txt))
+inspect(docs)
 
-#checkHandles <- lookupUsers(screenName)
+toSpace <- content_transformer(function (x , pattern ) gsub(pattern, " ", x))
+docs <- tm_map(docs, toSpace, "/")
+docs <- tm_map(docs, toSpace, "@")
+docs <- tm_map(docs, toSpace, "\\|")
 
-
-#x <- userTimeline("TheEllenShow",n=3200,includeRts = FALSE)
-#x <- searchTwitter('#machinelearning', n = 3200, lang = 'en', resultType = 'popular')
-
-x <- searchTwitter('#Trailheadx', n = 3200, lang = 'en', resultType = 'popular')
-
-HashTagData <- twListToDF(x)
-HashTag.df <- data.frame(HashTagData)
-
-unclean_tweets <- data.frame()
-unclean_tweets <- HashTag.df
-
-iconv(unclean_tweets, from="UTF-8", to="ASCII", sub="")
-clean_tweet <-  str_replace_all(unclean_tweets,"[^[:graph:]]", " ")
-clean_tweet <- gsub("[^[:alnum:]///' ]", "", clean_tweet)
-
-
-clean_tweet = gsub("&amp", "", clean_tweet)
-clean_tweet = gsub("(RT|via)((?:\\b\\W*@\\w+)+)", "", clean_tweet)
-clean_tweet <- tolower(clean_tweet)
-clean_tweet = gsub("@\\w+", "", clean_tweet)
-clean_tweet = gsub("[[:punct:]]", "", clean_tweet)
-clean_tweet = gsub("[[:digit:]]", "", clean_tweet)
-clean_tweet = gsub("http\\w+", "", clean_tweet)
-clean_tweet = gsub("[ \t]{2,}", "", clean_tweet)
-clean_tweet = gsub("^\\s+|\\s+$", "", clean_tweet) 
+# Convert the text to lower case
+docs <- tm_map(docs, content_transformer(tolower))
+# Remove numbers
+docs <- tm_map(docs, removeNumbers)
+# Remove english common stopwords
+docs <- tm_map(docs, removeWords, stopwords("english"))
+# Remove your own stop word
+# specify your stopwords as a character vector
+docs <- tm_map(docs, removeWords, c("tco", "https")) 
+# Remove punctuations
+docs <- tm_map(docs, removePunctuation)
+# Eliminate extra white spaces
+docs <- tm_map(docs, stripWhitespace)
 
 
-HashTag <- Corpus(VectorSource(clean_tweet))
-HashTag <- tm_map(HashTag, content_transformer(tolower))
-HashTag <- tm_map(HashTag, removeWords, c(stopwords("english"), "cfalse", "true", "iphonea", "relnofollowmedia", "relnofollowtwitter", "href", "web","clientaa", "clienta"))
+dtm <- TermDocumentMatrix(docs)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+head(d, 10)
 
-wordcloud(HashTag, min.freq = 1, scale=c(6,0.6),colors=brewer.pal(8, "Set1"), random.order = FALSE, max.words = 150)
+
+wordcloud(words = d$word, freq = d$freq, min.freq = 1,
+          max.words=200, random.order=FALSE, rot.per=0.35, 
+          colors=brewer.pal(8, "Dark2"))
+
+wordcloud2(d, shape = "cardioid")
+
+letterCloud(d, word = "R")
 

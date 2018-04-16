@@ -1,0 +1,158 @@
+---
+title: "Exploring Tweets with Wordclouds in R"
+author: "Deepal DSilva"
+date: "April 13, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE, message=F, warning=F}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
+```
+
+##It's easy! You just need to use the WordCloud2 R package
+ 
+Ever wondered what you tweet about the most? Or you have your favourite conference going on and you want to know what's the buzz around it?
+Or maybe you just want to know what's the talk about the latest movie that got released?
+
+Well WordClouds are your friend. They are simple to set up, provide stunning visualizations and easily customizable. 
+
+##But first, what is a WordCloud?
+
+An image composed of words used in a particular text or subject, in which the size of each word indicates its frequency or importance.
+
+Now that you know the basics, let's get started.
+
+##Loading up the required libraries
+
+```{r}
+library(twitteR)
+library(ROAuth)
+library(stringr)
+library(tm)
+library(wordcloud2)
+library(tidytext)
+```
+
+##Twitter App set up
+
+We are going to use twitter data to build our wordcloud, so go get a twitter account if you do not have one. I'll wait...
+
+Next we are going to need a Twitter App.
+
+This just a one time setup. Think of it as:
+
+  1. You need to authenticate yourself on Twitter
+  
+  2. So that you can send a request for tweets and
+  
+  3. For twitter to send them back to you.
+  
+I'll not go into the detailed steps. You can use one of these tutorials available. [Read](https://iag.me/socialmedia/how-to-create-a-twitter-app-in-8-easy-steps/) or [Watch](https://www.youtube.com/watch?v=xqSp7060Gj0)
+
+
+```{r}
+consumer_key <- "mftPn6qtOfCL46fzJY3pTeVI4"   #Your Consumer Key (API Key)
+consumer_secret <- "x5D1VIlV1O4TkZPshj31j88CutI8X2eSfgryy0pdMpDJjUTcKK"   #Your Consumer Secret (API Secret)
+access_token <- "2924790128-WORx3u9bTwDqAYr6zSanDnDlafLaSHBdzVKYZxC"   # Your Access Token
+access_secret <- "aMFTRClgP3Q2K0pJ21p1fromq1OWx4cS1hU6i4qJyqpZb"    #Your Access Token Secret
+setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
+
+#These tokens will not work. You need to enter in your own. 
+```
+
+  
+##Extracting Twitter Data
+ 
+You can either extract tweets based on a user's profile or any keywords/hashtags. Here are both the examples.
+
+```{r}
+#Query a hashtag
+#tweets <- searchTwitter("#rstats",n=3000,lang="en", resultType = "popular")
+
+#OR 
+
+#Query a user you follow or yourself
+tweets <- userTimeline("dsilvadeepal",n=3200,includeRts = FALSE)
+```
+
+##Text Mining your tweets
+
+We now need to extract the text from the tweets to a vector.
+
+```{r}
+tweets.txt <- sapply(tweets, function(t)t$getText())
+```
+
+We are first going to remove graphical parameters. This removes visible characters (anything except spaces and control characters) to avoid input errors.
+
+```{r}
+tweets.txt <- str_replace_all(tweets.txt,"[^[:graph:]]", " ") 
+```
+
+Now let's create a function to clean out tweets. Here we are going to remove digits, punctuations, spaces, http links, retweets (RTs). You can customize this function based on the data you are processing
+
+
+```{r}
+clean.text = function(x)
+{
+  
+  x = tolower(x)                   # tolower
+  x = gsub("rt", "", x)            # remove rt
+  x = gsub("@\\w+", "", x)         # remove at
+  x = gsub("[[:punct:]]", "", x)   # remove punctuation
+  x = gsub("[[:digit:]]", "", x)   # remove numbers
+  x = gsub("http\\w+", "", x)      # remove links http
+  x = gsub("[ |\t]{2,}", "", x)    # remove tabs
+  x = gsub("^ ", "", x)            # remove blank spaces at the beginning
+  x = gsub(" $", "", x)            # remove blank spaces at the end
+  
+  return(x)
+}
+
+```
+
+Now let's call our function on the tweets we have. 
+
+```{r}
+clean_tweet <- clean.text(tweets.txt)
+```
+
+Next we build a Corpus - A Corpus is a collection of text documents and the VectorSource points to the vector where the tweets are stored.
+
+
+```{r}
+tweets <- Corpus(VectorSource(clean_tweet))
+```
+
+We are also going to create a vector to remove english stop words and any additional words that are irrelevant (we'll identify these words in a later step). Some common english stop words are 'the', 'I', 'he'. 
+```{r}
+wordsToRemove <- c(stopwords('en'), 'tco', 'https')
+clean_tweet <- tm_map(tweets, removeWords, wordsToRemove)
+```
+
+
+We now create a Term Document Matrix (TDM) which reflects the number of times each word in the corpus is found in each of the documents.
+
+```{r}
+dtm <- TermDocumentMatrix(clean_tweet, control = list(wordLengths = c(1, Inf)))
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+head(d, 10)   #inspect our word list and remove any irrelevant words in the stopwords step above
+```
+
+Finally for the fun part!
+
+##Creating our wordcloud
+
+Here we are going to use the WordCloud2 package which is a newer package with a lot more customizations.
+
+```{r}
+wordcloud2(d, shape = "star", color="random-dark", backgroundColor = "lightblue",
+           minRotation = -pi/4, maxRotation = -pi/4, size = 0.5)
+
+```
+
+There are a few limitations to note using the TwitterR package:
+  1. Twitter API limits the number of tweets a user can get from a particular timeline to be 3200
+
