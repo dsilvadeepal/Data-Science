@@ -1,5 +1,5 @@
 ---
-title: "Exploring Tweets with Wordclouds in R"
+title: "How to Visualize What You Have Been Tweeting :A  Wordcloud Experiment in R"
 author: "Deepal DSilva"
 date: "April 13, 2018"
 output: html_document
@@ -51,13 +51,12 @@ I'll not go into the detailed steps. You can use one of these tutorials availabl
 
 
 ```{r}
-consumer_key <- "mftPn6qtOfCL46fzJY3pTeVI4"   #Your Consumer Key (API Key)
-consumer_secret <- "x5D1VIlV1O4TkZPshj31j88CutI8X2eSfgryy0pdMpDJjUTcKK"   #Your Consumer Secret (API Secret)
-access_token <- "2924790128-WORx3u9bTwDqAYr6zSanDnDlafLaSHBdzVKYZxC"   # Your Access Token
-access_secret <- "aMFTRClgP3Q2K0pJ21p1fromq1OWx4cS1hU6i4qJyqpZb"    #Your Access Token Secret
+consumer_key <- "xxxx"      #Your Consumer Key (API Key)
+consumer_secret <- "xxxx"   #Your Consumer Secret (API Secret)
+access_token <- "xxxx"      #Your Access Token
+access_secret <- "xxxx"     #Your Access Token Secret
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
-#These tokens will not work. You need to enter in your own. 
 ```
 
   
@@ -153,6 +152,5 @@ wordcloud2(d, shape = "star", color="random-dark", backgroundColor = "lightblue"
 
 ```
 
-There are a few limitations to note using the TwitterR package:
-  1. Twitter API limits the number of tweets a user can get from a particular timeline to be 3200
+Note: The Twitter API limits the number of tweets a user can get from a particular timeline to be 3200
 
