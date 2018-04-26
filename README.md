@@ -18,7 +18,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
 - [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
-- [ ]  *Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
+- [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
 - [ ]  *Book: [R for Data Science](http://r4ds.had.co.nz/index.html)
 - [x]  Project: Do all problems in Rosalind's [Python Village](http://rosalind.info/problems/list-view/?location=python-village) 
