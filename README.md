@@ -16,6 +16,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
+- [ ]  *Course:[Intro to SQL for Data Science](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
 - [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
 - [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
