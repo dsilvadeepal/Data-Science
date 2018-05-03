@@ -16,8 +16,9 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
-- [ ]  *Course:[Intro to SQL for Data Science](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
+- [x]  Course:[Intro to SQL for Data Science](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
+- [ ]  *Course: [Managing Big Data with MySQL](https://www.coursera.org/learn/analytics-mysql/home/info)
 - [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
 - [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
@@ -141,3 +142,5 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Course: [Dynamic Systems and Control](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/index.htm) 
 - [ ]  Book: [New Horizons for a Data-Driven Economy](https://link.springer.com/book/10.1007%2F978-3-319-21569-3)
 - [ ]  Book: [The Challenge of Chance](https://link.springer.com/book/10.1007/978-3-319-26300-7)
+
+Coursera - Excel to MySQL: Analytic Techniques for Business Specialization
