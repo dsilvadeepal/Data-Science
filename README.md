@@ -11,14 +11,25 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [Data Science Central](http://www.datasciencecentral.com/)
 - [R Bloggers](https://www.r-bloggers.com/)
 
+## Tableau
+- [ ]  Course: [Data Visualization with Tableau](https://classroom.udacity.com/courses/ud1006)
+- [ ]  Course: [Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau/home/welcome)
+- [ ]  Course: [Fundamentals of Visualization with Tableau](https://www.coursera.org/learn/data-visualization-tableau/home/welcome)
+- [ ]  Course: [Visual Analytics with Tableau](https://www.coursera.org/learn/dataviz-visual-analytics/home/welcome)
+- [ ]  Course: [Creating Dashboards and Storytelling with Tableau](https://www.coursera.org/learn/dataviz-dashboards/home/welcome)
+
+
+## SQL
+- [x]  Course:[Intro to SQL for Data Science](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
+- [ ]  *Course: [Managing Big Data with MySQL](https://www.coursera.org/learn/analytics-mysql/home/info)
+
+
 ## Tier 0 - prep
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
-- [x]  Course:[Intro to SQL for Data Science](https://www.datacamp.com/courses/intro-to-sql-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
-- [ ]  *Course: [Managing Big Data with MySQL](https://www.coursera.org/learn/analytics-mysql/home/info)
 - [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
 - [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
@@ -35,7 +46,6 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Python Data Science Toolbox (Part 1)](https://www.datacamp.com/courses/python-data-science-toolbox-part-1)
 - [x]  Course: [Python Data Science Toolbox (Part 2)](https://www.datacamp.com/courses/python-data-science-toolbox-part-2)
 - [ ]  Course: [Data Wrangling with MongoDB](https://www.udacity.com/course/data-wrangling-with-mongodb--ud032)
-- [ ]  Course: [Data Visualization](https://www.coursera.org/learn/datavisualization/home/welcome)
 - [ ]  Course: [A/B Testing](https://www.udacity.com/course/ab-testing--ud257?utm_medium=referral&utm_campaign=api)
 - [ ]  Course: [Introduction to Biology - The Secret of Life](https://www.edx.org/course/introduction-biology-secret-life-mitx-7-00x-6) 
 - [ ]  Course: [Calculus One](https://www.coursera.org/learn/calculus1)  

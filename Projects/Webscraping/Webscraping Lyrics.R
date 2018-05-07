@@ -37,7 +37,7 @@ for (i in 1:10) {
       html_attr("href") 
   
    #Inner loop to get the Song Name and Lyrics from the Song Link    
-    for (j in 1:10) {
+    for (j in 1:3) {
         
       # Get lyrics
       lyrics_scraped <- read_html(song_links[j]) %>%
@@ -56,7 +56,7 @@ for (i in 1:10) {
                                                    Lyrics = lyrics_scraped ))
       
       # Insert a time lag - to prevent me from getting banned :)
-      Sys.sleep(10)
+      #Sys.sleep(10)
      }
 }      
 
