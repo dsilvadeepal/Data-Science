@@ -12,7 +12,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [R Bloggers](https://www.r-bloggers.com/)
 
 ## Tableau
-- [ ]  Course: [Data Visualization with Tableau](https://classroom.udacity.com/courses/ud1006)
+- [ ]  *Course: [Data Visualization with Tableau](https://classroom.udacity.com/courses/ud1006)
 - [ ]  Course: [Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau/home/welcome)
 - [ ]  Course: [Fundamentals of Visualization with Tableau](https://www.coursera.org/learn/data-visualization-tableau/home/welcome)
 - [ ]  Course: [Visual Analytics with Tableau](https://www.coursera.org/learn/dataviz-visual-analytics/home/welcome)
