@@ -14,7 +14,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 ## Tableau
 - [x]  Course: [Data Visualization with Tableau](https://classroom.udacity.com/courses/ud1006)
 - [x]  Course: [Fundamentals of Visualization with Tableau](https://www.coursera.org/learn/data-visualization-tableau/home/welcome)
-- [ ]  *Course: [Visual Analytics with Tableau](https://www.coursera.org/learn/dataviz-visual-analytics/home/welcome)
+- [x]  Course: [Visual Analytics with Tableau](https://www.coursera.org/learn/dataviz-visual-analytics/home/welcome)
 - [ ]  Course: [Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau/home/welcome)
 - [ ]  Course: [Creating Dashboards and Storytelling with Tableau](https://www.coursera.org/learn/dataviz-dashboards/home/welcome)
 
@@ -30,6 +30,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
+- [x]  Course: [The R Programming Environment](https://www.coursera.org/learn/r-programming-environment/home/welcome)
 - [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
 - [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
@@ -100,7 +101,6 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Course: [Mathematical Biostatistics Boot Camp 2](https://www.coursera.org/learn/biostatistics-2) 
 - [ ]  Course Series: [Big Data Path on Cognitive Class](https://cognitiveclass.ai/learn/big-data/)
 - [ ]  Course: [Convex Optimization](https://lagunita.stanford.edu/courses/Engineering/CVX101/Winter2014/about)
-- [ ]  Book: [R for Data Science](http://r4ds.had.co.nz/) 
 - [ ]  Course: [Probability: Basic Concepts & Discrete Random Variables](https://www.edx.org/course/probability-basic-concepts-discrete-purduex-416-1x-1) 
 - [ ]  Course Series: [Hadoop Path on Cognitive Class](https://cognitiveclass.ai/learn/hadoop/)
 - [ ]  Course: [Probability: Distribution Models & Continuous Random Variables](https://www.edx.org/course/probability-distribution-models-purduex-416-2x-1) 
