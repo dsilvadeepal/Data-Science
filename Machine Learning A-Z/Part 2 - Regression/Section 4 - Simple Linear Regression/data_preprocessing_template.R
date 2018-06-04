@@ -2,10 +2,9 @@
 
 # Importing the dataset
 dataset = read.csv('Data.csv')
-# dataset = dataset[, 2:3]
 
 # Splitting the dataset into the Training set and Test set
-#install.packages('caTools')
+# install.packages('caTools')
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$DependentVariable, SplitRatio = 0.8)
