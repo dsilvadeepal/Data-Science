@@ -15,8 +15,8 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [x]  Course: [Data Visualization with Tableau](https://classroom.udacity.com/courses/ud1006)
 - [x]  Course: [Fundamentals of Visualization with Tableau](https://www.coursera.org/learn/data-visualization-tableau/home/welcome)
 - [x]  Course: [Visual Analytics with Tableau](https://www.coursera.org/learn/dataviz-visual-analytics/home/welcome)
-- [ ]  Course: [Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau/home/welcome)
-- [ ]  Course: [Creating Dashboards and Storytelling with Tableau](https://www.coursera.org/learn/dataviz-dashboards/home/welcome)
+- [x]  Course: [Data Visualization and Communication with Tableau](https://www.coursera.org/learn/analytics-tableau/home/welcome)
+- [x]  Course: [Creating Dashboards and Storytelling with Tableau](https://www.coursera.org/learn/dataviz-dashboards/home/welcome)
 
 
 ## SQL
