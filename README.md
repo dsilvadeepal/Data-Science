@@ -1,7 +1,7 @@
-# Data Science - comprehensive
+## Data Science - comprehensive
 A curriculum covering Data Science topics relevant to Machine Learning, Bioinformatics, and Artificial Intelligence. Includes necessary background in mathematics and the sciences.
 
-## Blogs
+### Blogs
 Bookmark these blogs and try to read at least one article from one of them per week.
 - [Data School](http://www.dataschool.io/)
 - [Machine Learning Mastery](https://machinelearningmastery.com/blog/)
@@ -24,14 +24,14 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  *Course: [Managing Big Data with MySQL](https://www.coursera.org/learn/analytics-mysql/home/info)
 
 
-## Tier 0 - prep
+### Tier 0 - prep
 - [ ]  Book: [College Algebra](https://openstax.org/details/books/college-algebra) or Course: [College Algebra and Problem Solving](https://www.edx.org/course/college-algebra-problem-solving-asux-mat117x) or thorough knowledge of Algebra.
 - [ ]  Book: [Precalculus](https://openstax.org/details/books/precalculus) or Course: [Precalculus](https://www.edx.org/course/precalculus-asux-mat170x) or [Khan Academy](https://www.khanacademy.org/math/precalculus) or thorough knowledge of Precalculus
 - [x]  Course: [Intro to Python for Data Science](https://www.datacamp.com/courses/intro-to-python-for-data-science)
 - [x]  Course:[Intermediate Python for Data Science](https://www.datacamp.com/courses/intermediate-python-for-data-science)
 - [x]  Course: [Data Analysis with R](https://classroom.udacity.com/courses/ud651)
 - [x]  Course: [The R Programming Environment](https://www.coursera.org/learn/r-programming-environment/home/welcome)
-- [ ]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
+- [x]  *Course: [The Analytics Edge](https://courses.edx.org/courses/course-v1:MITx+15.071x+2T2017/course/) 
 - [ ]  Course: [Intro to Data Science](https://www.udacity.com/course/intro-to-data-science--ud359)
 - [ ]  Book: [Introduction to Statistical and Data Sciences via R](http://moderndive.com/index.html)
 - [ ]  *Book: [R for Data Science](http://r4ds.had.co.nz/index.html)
@@ -40,7 +40,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Project: Complete one [Bot Programming Competition on CodinGame](https://www.codingame.com/multiplayer/bot-programming)
 
 
-## Tier 1 - foundations
+### Tier 1 - foundations
 - [ ]  Course: [MongoDB for Developers](https://university.mongodb.com/courses/M101P/about) - note: this course is only intermittently offered, sign up at the start of Tier 1, then proceed to the other courses and return to this one when the next session opens up.
 - [x]  Course: [Intro to Descriptive Statistics](https://classroom.udacity.com/courses/ud827wsz1)
 - [x]  Course: [Intro to Inferential Statistics](https://classroom.udacity.com/courses/ud201)
@@ -70,7 +70,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Project: Complete [Deep Learning - TensorFlow on CodinGame](https://www.codingame.com/ide/puzzle/deep-learning-tensorflow)
 
 
-## Tier 2 - develop more expertise
+### Tier 2 - develop more expertise
 - [ ]  Course: [MongoDB Performance](https://university.mongodb.com/courses/M201/about) - note: this course is only intermittently offered, sign up at the start of Tier 2, then proceed to the other courses and return to this one when the next session opens up.
 - [ ]  Book: [Biology](https://openstax.org/details/books/biology) 
 - [ ]  Course: [Linear Algebra](https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/) 
@@ -93,7 +93,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Project: Complete one competition of your choice  from [Crowd Analytix](https://www.crowdanalytix.com/community)
 - [ ]  Project: Complete one [Bot Programming Competition on CodinGame](https://www.codingame.com/multiplayer/bot-programming)
 
-## Tier 3 - add more rigor
+### Tier 3 - add more rigor
 - [ ]  Course: [Introduction to Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/index.htm) (Python - requires book purchase) or [Algorithms, Part I](https://www.coursera.org/learn/algorithms-part1) and [Algorithms, Part II](https://www.coursera.org/learn/algorithms-part2) (Java)
 - [ ]  Course: [Design and Analysis of Algorithms](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm) (Python - requires book purchase) or [Analysis of Algorithms](https://www.coursera.org/learn/analysis-of-algorithms)  (Java)
 - [ ]  Book: [The Art of R Programming](http://heather.cs.ucdavis.edu/~matloff/132/NSPpart.pdf)
@@ -115,7 +115,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Project: Complete one competition of your choice  from [Crowd Analytix](https://www.crowdanalytix.com/community)
 - [ ]  Project: Complete one competition of your choice  from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/all/)
 
-## Tier 4 - practical applications
+### Tier 4 - practical applications
 
 - [ ]  Book: [Machine Learning with R](https://vk.com/doc168073_317718618?hash=90cd2a2976f079b1e7&dl=43db8b80daa2831cc1) 
 - [ ]  Course: [Statistics and R for the Life Sciences](https://www.edx.org/course/statistics-r-harvardx-ph525-1x-0)
@@ -140,7 +140,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Project: Complete one competition of your choice from [Analytics Vidhya](https://datahack.analyticsvidhya.com/contest/all/)
 - [ ]  Project: Complete one competition of your choice from [Driven Data](https://www.drivendata.org/competitions/)
 
-## Tier 5 - Bonus Round - Advanced
+### Tier 5 - Bonus Round - Advanced
 - [ ]  Course: [Topics in Mathematics of Data Science](https://ocw.mit.edu/courses/mathematics/18-s096-topics-in-mathematics-of-data-science-fall-2015/index.htm)
 - [ ]  Book: [Bayesian Methods for Hackers](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers)
 - [ ]  Book: [Bayesian Methods in the Search for MH370](https://link.springer.com/book/10.1007/978-981-10-0379-0) 
@@ -148,8 +148,7 @@ Bookmark these blogs and try to read at least one article from one of them per w
 - [ ]  Book: [Mining of Massive Datasets](http://infolab.stanford.edu/~ullman/mmds/book.pdf)
 - [ ]  Book: [Informatics in the Future](https://link.springer.com/book/10.1007%2F978-3-319-55735-9)
 - [ ]  Course: [Discrete Stochastic Processes](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-262-discrete-stochastic-processes-spring-2011/) 
-- [ ]  Book: [Bisociative Knowledge Discovery](https://link.springer.com/book/10.1007%2F978-3-642-31830-6) 
-- [ ]  Course: [Dynamic Systems and Control](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-241j-dynamic-systems-and-control-spring-2011/index.htm) 
+- [ ]  Book: [Bisociative Knowledge Discovery](https://link.springer.com/book/10.1007%2F978-3-642-31830-6)  
 - [ ]  Book: [New Horizons for a Data-Driven Economy](https://link.springer.com/book/10.1007%2F978-3-319-21569-3)
 - [ ]  Book: [The Challenge of Chance](https://link.springer.com/book/10.1007/978-3-319-26300-7)
 
